@@ -11,6 +11,10 @@ const chatRoutes = require('./routes/chat');
 const friendRoutes = require('./routes/friends');
 const callRoutes = require('./routes/calls');
 const gameRoutes = require('./routes/games');
+const postRoutes = require('./routes/posts');
+const reelRoutes = require('./routes/reels');
+const storyRoutes = require('./routes/stories');
+const jokeRoutes = require('./routes/jokes');
 
 dotenv.config();
 
@@ -38,6 +42,10 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/friends', friendRoutes);
 app.use('/api/calls', callRoutes);
 app.use('/api/games', gameRoutes);
+app.use('/api/posts', postRoutes);
+app.use('/api/reels', reelRoutes);
+app.use('/api/stories', storyRoutes);
+app.use('/api/jokes', jokeRoutes);
 
 // Socket.io Real-time Events
 io.on('connection', (socket) => {
